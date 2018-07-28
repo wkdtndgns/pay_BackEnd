@@ -25,3 +25,5 @@
 /.nb-gradle/
 
 /src/main/resources/application.properties target .classpath .project .settings
+
+/application.properties
