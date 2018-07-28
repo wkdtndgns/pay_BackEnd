@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: pay
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: wkdtn
+Implementation-Vendor-Id: net.skhu
+Build-Jdk: 1.8.0_162
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/pay
+Created-By: Maven Integration for Eclipse
+
