@@ -26,4 +26,4 @@
 
 /src/main/resources/application.properties target .classpath .project .settings
 
-/application.properties
+/src/main/resources/application.properties
