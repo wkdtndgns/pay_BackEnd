@@ -13,7 +13,7 @@ import net.skhu.domain.rank;
 import net.skhu.repository.RankRepository;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://sellery.me.s3-website.ap-northeast-2.amazonaws.com")
 @RequestMapping("api")
 public class MainController {
 
@@ -24,7 +24,7 @@ public class MainController {
     	
         List<rank> list = rank.findAllByOrderByPayDesc();
         model.addAttribute("list", list);
-  
+       
         return list;
     }
     
