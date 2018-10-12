@@ -13,7 +13,7 @@ import net.skhu.domain.rank;
 import net.skhu.repository.RankRepository;
 
 @RestController
-@CrossOrigin(origins = "http://sellery.me.s3-website.ap-northeast-2.amazonaws.com")
+@CrossOrigin
 @RequestMapping("api")
 public class MainController {
 
