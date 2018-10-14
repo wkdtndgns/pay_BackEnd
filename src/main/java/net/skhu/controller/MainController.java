@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.skhu.domain.mac;
 import net.skhu.domain.rank;
+import net.skhu.repository.MacRepository;
 import net.skhu.repository.RankRepository;
 
 @RestController
@@ -18,7 +20,8 @@ import net.skhu.repository.RankRepository;
 public class MainController {
 
 	@Autowired RankRepository rank;
-	
+	@Autowired MacRepository mac; 
+
     @RequestMapping("list")
     public List<rank> list(Model model) {
     	
@@ -28,6 +31,16 @@ public class MainController {
         return list;
     }
     
+    @RequestMapping("list/mac")
+    public List<mac> listMac(Model model) {
+    	
+        List<mac> list = mac.findAll();
+        model.addAttribute("list", list);
+       
+        return list;
+    }
+    
+    
     @RequestMapping("insert/{pay}")
     public double rank(@PathVariable("pay") int pay) {
     	rank r = new rank(); 
@@ -35,8 +48,7 @@ public class MainController {
     	rank.save(r);
  	
     	List<rank> list = rank.findAllByOrderByPayDesc();
-    	
-    	
+  	
     	int size = list.size();
     	double result=0;
     	int index = 0;
@@ -46,12 +58,9 @@ public class MainController {
     			index=i;
     		}    		
     	}
-    	
-    	System.out.println(size +" "+ index);
-    	
-    	System.out.format("%.2f%n", index/(double)size);
+
     	result=index/(double)size;
-    	System.out.println(result);
+    
     	
     	return result;
     }
