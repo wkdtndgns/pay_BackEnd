@@ -1,6 +1,6 @@
 # pay_BackEnd
 
-#Link <a href=http://sellery.me.s3-website.ap-northeast-2.amazonaws.com/>payday </a>
+#Link <a href=https://sellery.me/>sellery </a>
 
 월급날을 입력하면 지금 사표내면 받을 수 있는 돈과 오늘 출근해서 받은 돈을 알 수 있는 
 알고리즘을 js로 짰습니다. 
